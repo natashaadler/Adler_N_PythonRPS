@@ -17,9 +17,9 @@ player= False
 def winorlose(status):
 	# print("called win or lose function", status, "\n")
 	print("You", status, "Would you like to play again?")
-	choice = input("Y / No?")
+	choice = input("Y / N ?")
 
-	if choice == "Y" or choice == "y"
+	if choice == "Y" or choice == "y":
 		global player_lives
 		global computer_lives
 		global player
@@ -86,7 +86,7 @@ while player is False:
 			computer_lives = computer_lives -1
 
 	if player_lives == 0:
-		winorlose("lost")
+		winorlose("lose")
 		# print("You lose. Loser. Would you like to play again?")
 		# choice = input("Y / N ?")
 
@@ -104,7 +104,7 @@ while player is False:
 			
 
 	elif computer_lives == 0:
-		winorlose("winner")
+		winorlose("win")
 		# print("You Won! Would you like to play again?")
 		# choice = input("Y / N ?")
 
