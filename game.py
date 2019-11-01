@@ -1,34 +1,86 @@
 #import the random package so we can generate a random AI choicefrom random import randint 
 from random import randint
 
-#"basket" of choices
-choices=["rock", "paper", "scissors"]
 
-# let the AI make a choice
-computer=choices[randint(0,2)]
+choices =["rock", "paper", "scissors"]
+computer = choices[randint(0,2)]
+lives = 5
+player = False
+line = ''' **************** '''
 
-#set up a game loop here so we dont have to keep restarting
-player= False 
 
 while player is False:
-	player=input ("choose rock, paper or scissors: \n") 
+
+	player = input ("Choose rock, paper or scissors: ") 
 	#print(computer, player)
 
-	#start doing some logic and condition checking
-	print("computer:", computer, "player", player)
+	#player winner screen
+	player_winner_screen = f'''
 
-	#always check a breaking condition first
+	{line}
+
+	 Player Wins!!!
+
+	 {player} beats {computer}
+	 Type rock, paper, scissors to play again!
+
+	{line}
+
+	'''
+
+	#computer winner screen
+	computer_winner_screen = f'''
+	
+	{line}
+
+	 Computer Wins!!!
+	
+	{computer} beats {player}
+
+	{line}
+	'''
+
+	#determines wether its a draw
 	if player == computer:
-		#we have a tie, no point in going any further
-		print("tie, no one wins! try again")
+		print(f'''
+		{line}
+
+		Its a DRAW!
+		{computer} = {player}
+		Type rock, paper, scissors to play again!
+
+		{line}
+		''')
+	#if the player trys to quit it will exit the program
 	elif player == "quit":
 		print("you choose to quit, quitter.")
 		exit()
-	else:
-		print("Not a tie. oh snap")
-		if player == "rock":
-			print("check and see what the computer is, and win or lose")
 
+	else:
+		
+		#check who wins
+		if player == "rock" and computer == "paper":
+			print(computer_winner_screen)
+
+		elif player == "paper" and computer == "rock":
+			print(player_winner_screen)
+
+		elif player == "paper" and computer == "scissors":
+			print(computer_winner_screen)
+
+		elif player == "scissors" and computer == "paper":
+			print(player_winner_screen)
+
+		elif player == "scissors" and computer == "rock":
+			print(computer_winner_screen)
+
+		elif player == "rock" and computer == "scissors":
+			print(player_winner_screen)
+
+		#if not a valid command type:
+		else:
+			print("Not a valid answer, please retry")
+		
 	player = False
 	computer = choices[randint(0,2)]
 
