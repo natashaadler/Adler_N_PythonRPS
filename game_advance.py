@@ -6,7 +6,7 @@ choices =["rock", "paper", "scissors"]
 computer = choices[randint(0,2)]
 lives = 5
 player = False
-line = ''' **************** '''
+line = ''' ----------------- '''
 
 
 while player is False:

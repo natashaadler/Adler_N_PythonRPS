@@ -20,27 +20,27 @@ while player is False:
 	#always check a breaking condition first
 	if player == computer:
 		#we have a tie, no point in going any further
-		print("tie, no one wins! try again")
+		print("Tie, no one wins! Try again")
 	elif player == "quit":
 		#you quit, lets player exit game
-		print("you choose to quit, quitter.")
+		print("You choose to quit, quitter.")
 		exit()
 	#PLAYER == ROCK
 	elif player == "rock": 
 		if computer == "paper":
-			print("You lose!", computer, "covers", palyer, "\n")
+			print("You lose!", computer, "covers", player, "\n")
 		else:
 			print("You won!", player, "smashes", computer, "\n")
 	#PLAYER == PAPER
 	elif player == "paper": 
 		if computer == "scissors":
-			print("You lose!", computer, "cuts", palyer, "\n")
+			print("You lose!", computer, "cuts", player, "\n")
 		else:
 			print("You won!", player, "covers", computer, "\n")
 	#PLAYER == SCISSORS
 	elif player == "scissors": 
 		if computer == "rock":
-			print("You lose!", computer, "smashes", palyer, "\n")
+			print("You lose!", computer, "smashes", player, "\n")
 		else:
 			print("You won!", player, "cuts", computer, "\n")
 
