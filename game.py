@@ -6,10 +6,10 @@ while gameVars.player is False:
 	print("================================\n")
 	print("Computer Lives:", gameVars.computer_lives, "/", gameVars.total_lives)
 	print("Player Lives:", gameVars.player_lives, "/", gameVars.total_lives)
-	print("\n================================")
-	print("Choose your weapon!")
+	print(gameVars.space)
 	print(gameVars.line)
-	player=input ("Choose rock, paper or scissors: \n") 
+	print("\nChoose your weapon,")
+	player=input ("rock, paper or scissors: \n") 
 
 	#print("computer:", computer, "player", player)
 
