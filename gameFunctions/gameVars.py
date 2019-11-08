@@ -9,6 +9,9 @@ computer_lives = 5
 total_lives = 5
 
 line= "--------------------------------"
+arrow= "--->"
+equal= "================================"
+space= "                                           "
 
 #COMPUTER MAKES CHOICE
 computer=choices[randint(0,2)]
